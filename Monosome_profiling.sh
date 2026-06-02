@@ -110,8 +110,8 @@ do
         
     fastqc -o $DIR/fastqc/before_trimmed/$GROUP --noextract -f fastq -t 12 $DATAPATH/$SAMPLE_PATH
     echo "FastQC is done"
-        
-    cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -m 50 -M 70 -q 20 -o $DIR/trimmed_fastq/$GROUP/$SAMPLE"_trimmed.fastq.gz" \
+
+    cutadapt -a AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC -m 20 -M 40 -q 20 -o $DIR/trimmed_fastq/$GROUP/$SAMPLE"_trimmed.fastq.gz" \
     $DATAPATH/$SAMPLE_PATH
     echo "Cutadapt is done" 
 
